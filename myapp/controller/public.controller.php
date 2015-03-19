@@ -59,4 +59,18 @@ class public_controller extends ControllerClass{
 		echo json_encode($rv); 
 		/////var_dump($rv);
 	}
+	
+	
+	public function test(){
+		
+		$postdata = file_get_contents("php://input");
+		$request = json_decode($postdata);
+		
+		if(empty($request)){
+			$request= array();
+		}
+		
+		echo json_encode($request,JSON_FORCE_OBJECT);
+	
+	}
 }

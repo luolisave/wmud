@@ -2,18 +2,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>W-Mud API list</title>
+        <title>W-Mud</title>
         <meta charset='utf-8'>
     </head>
     <body>
-        <h1>W-Mud API list</h1>
+        <h2>W-Mud GUI</h2>
+        <p>
+            <a href="gui">Graphic User Interface</a>
+        </p>
+        
+        <hr />
+        <h2>W-Mud API list</h2>
         <ul>
             <li><a href="<?php echo SITE_URL , "/index.php/public/opensession/username/test/password/123456"; ?>">opensession</a> 输入用户名密码，获得sessionId</li>
             <li><a href="<?php echo SITE_URL , "/index.php/public/closesession/sessionId/put_sessionId_here"; ?>">closesession</a> 通过sessionId关闭session</li>
             
             <li><a href="<?php echo SITE_URL , "/index.php/act/gohome/sessionId/put_sessionId_here"; ?>">gohome</a> 回家 （user表uLocation跳转为1（家））</li>
             <li>
-                look (观察) TODO
+                msg (信息)
+                <ul>
+                    <li><a href="<?php echo SITE_URL , "/index.php/msg/world/sessionId/put_sessionId_here/msg/testWorldMessage"; ?>">world message</a> 世界喊话</li>
+                    <li><a href="<?php echo SITE_URL , "/index.php/msg/talk/sessionId/put_sessionId_here/mapId/1/msg/testMessage"; ?>">talk</a> 当前MapId下说话 （TODO later）</li>
+                    <li><a href="<?php echo SITE_URL , "/index.php/msg/chat/sessionId/put_sessionId_here/userId/1/msg/testMessage"; ?>">chat</a> 与特定的人对话 （TODO later）</li>
+                </ul>
+            </li>
+            <li>
+                look (观察)
                 <ul>
                     <li><a href="<?php echo SITE_URL , "/index.php/act/look/sessionId/put_sessionId_here/direction/here"; ?>">here</a> 看当下位置</li>
                     <li><a href="<?php echo SITE_URL , "/index.php/act/look/sessionId/put_sessionId_here/direction/e"; ?>">e</a> 看东方</li>
@@ -27,7 +41,7 @@
                 </ul>
             </li>
             <li>
-                walk (行走) TODO
+                walk (行走)
                 <ul>
                     <li><a href="<?php echo SITE_URL , "/index.php/act/walk/sessionId/put_sessionId_here/direction/e"; ?>">e</a> 向东走</li>
                     <li><a href="<?php echo SITE_URL , "/index.php/act/walk/sessionId/put_sessionId_here/direction/ne"; ?>">ne</a> 向东北走</li>
